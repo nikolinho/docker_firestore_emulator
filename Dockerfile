@@ -3,7 +3,7 @@ LABEL maintainer="Nikolinho"
 
 RUN apt -y update 2>/dev/null | grep packages | cut -d '.' -f 1 &&\
 	#apt install -y openjdk8-jre &&\
-	apt install -y google-cloud-sdk-firestore-emulator &&\
+	#apt install -y google-cloud-sdk-firestore-emulator &&\
 	rm -rf /var/lib/apt/lists/* &&\
 	gcloud components install beta &&\
 	gcloud components install cloud-firestore-emulator --quiet
