@@ -2,6 +2,7 @@ FROM google/cloud-sdk:286.0.0-alpine
 LABEL maintainer="Nikolinho"
 
 RUN apk add --update --no-cache openjdk8-jre &&\
+	apt add --update --no-cache google-cloud-sdk-firestore-emulator &&\
 	gcloud components install beta &&\
 	gcloud components install cloud-firestore-emulator --quiet
 
